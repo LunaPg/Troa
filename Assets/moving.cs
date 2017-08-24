@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class moving : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public int x, y;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+       // OnMouseDown();
+        
 		
 	}
+
+    void OnMouseDown() {
+        Debug.Log("CLICK CLICK !"  +x+  y+ this);
+
+    }
+
+    
 }
