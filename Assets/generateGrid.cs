@@ -18,6 +18,7 @@ public class generateGrid : MonoBehaviour {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < width; y++) {
                 Transform item = Instantiate(bricks);
+              
                 SpriteRenderer sprite = item.GetComponent<SpriteRenderer>();
                 float sizeX = sprite.bounds.size.x;
                 float xCoordinate = bricks.localPosition.x + (sizeX * (x ));
@@ -30,7 +31,8 @@ public class generateGrid : MonoBehaviour {
                 movingClass.type = sprite.sprite.name;
                 movingClass.x = x;
                 movingClass.y = y;
-                Grid[x, y] = item;
+                item.name=sprite.sprite.name+"-" +x + "-" + y;
+              Grid [x, y] = item;
             }
         }
         gridmanager.setGrid(Grid);
